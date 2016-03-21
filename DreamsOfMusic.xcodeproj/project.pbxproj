@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5793281A1C8C8993001627C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 579328191C8C8993001627C1 /* main.m */; };
+		5793281D1C8C8993001627C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5793281C1C8C8993001627C1 /* AppDelegate.m */; };
+		579328231C8C8993001627C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579328211C8C8993001627C1 /* Main.storyboard */; };
+		579328251C8C8993001627C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579328241C8C8993001627C1 /* Assets.xcassets */; };
+		579328281C8C8993001627C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579328261C8C8993001627C1 /* LaunchScreen.storyboard */; };
+		579328331C8C8993001627C1 /* DreamsOfMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 579328321C8C8993001627C1 /* DreamsOfMusicTests.m */; };
+		579328431C8C8A23001627C1 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 579328421C8C8A23001627C1 /* Song.m */; };
+		579328471C8C8A59001627C1 /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 579328461C8C8A59001627C1 /* PlayerModel.m */; };
+		5793284D1C8C8AC5001627C1 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5793284C1C8C8AC5001627C1 /* PlayerViewController.m */; };
+		5793284F1C8C8C52001627C1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5793284E1C8C8C52001627C1 /* AVFoundation.framework */; };
+		579328511C8C8C60001627C1 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579328501C8C8C60001627C1 /* CoreMedia.framework */; };
+		579328531C8C8C6A001627C1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579328521C8C8C6A001627C1 /* AudioToolbox.framework */; };
+		579328581C8C933F001627C1 /* Сплин - Танцуй!.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 579328551C8C933F001627C1 /* Сплин - Танцуй!.m4a */; };
+		579328591C8C933F001627C1 /* Old Friends.flac in Resources */ = {isa = PBXBuildFile; fileRef = 579328561C8C933F001627C1 /* Old Friends.flac */; };
+		5793285A1C8C933F001627C1 /* System Of A Down - Lonely Day.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 579328571C8C933F001627C1 /* System Of A Down - Lonely Day.mp3 */; };
+		579328631C905D21001627C1 /* SongsLibraryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 579328621C905D21001627C1 /* SongsLibraryVC.m */; };
+		5793286A1C96BF49001627C1 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 579328691C96BF49001627C1 /* Presenter.m */; };
+		5793286D1C96BFBC001627C1 /* SongPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5793286C1C96BFBC001627C1 /* SongPresenter.m */; };
+		579328701C96C07E001627C1 /* SongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5793286F1C96C07E001627C1 /* SongTableViewCell.m */; };
+		579328751C96E05D001627C1 /* SongTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 579328741C96E05D001627C1 /* SongTableViewDataSource.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5793282F1C8C8993001627C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5793280D1C8C8993001627C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 579328141C8C8993001627C1;
+			remoteInfo = DreamsOfMusic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		579328151C8C8993001627C1 /* DreamsOfMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamsOfMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		579328191C8C8993001627C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5793281B1C8C8993001627C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5793281C1C8C8993001627C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		579328221C8C8993001627C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		579328241C8C8993001627C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		579328271C8C8993001627C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		579328291C8C8993001627C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5793282E1C8C8993001627C1 /* DreamsOfMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamsOfMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		579328321C8C8993001627C1 /* DreamsOfMusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamsOfMusicTests.m; sourceTree = "<group>"; };
+		579328341C8C8993001627C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579328411C8C8A23001627C1 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Song.h; path = Model/Song.h; sourceTree = "<group>"; };
+		579328421C8C8A23001627C1 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Song.m; path = Model/Song.m; sourceTree = "<group>"; };
+		579328451C8C8A59001627C1 /* PlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerModel.h; path = Model/PlayerModel.h; sourceTree = "<group>"; };
+		579328461C8C8A59001627C1 /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerModel.m; path = Model/PlayerModel.m; sourceTree = "<group>"; };
+		5793284B1C8C8AC5001627C1 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerViewController.h; path = View/PlayerViewController.h; sourceTree = "<group>"; };
+		5793284C1C8C8AC5001627C1 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerViewController.m; path = View/PlayerViewController.m; sourceTree = "<group>"; };
+		5793284E1C8C8C52001627C1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		579328501C8C8C60001627C1 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		579328521C8C8C6A001627C1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		579328551C8C933F001627C1 /* Сплин - Танцуй!.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Сплин - Танцуй!.m4a"; path = "LocalMusic/Сплин - Танцуй!.m4a"; sourceTree = "<group>"; };
+		579328561C8C933F001627C1 /* Old Friends.flac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Old Friends.flac"; path = "LocalMusic/Old Friends.flac"; sourceTree = "<group>"; };
+		579328571C8C933F001627C1 /* System Of A Down - Lonely Day.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "System Of A Down - Lonely Day.mp3"; path = "LocalMusic/System Of A Down - Lonely Day.mp3"; sourceTree = "<group>"; };
+		579328611C905D21001627C1 /* SongsLibraryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongsLibraryVC.h; path = View/SongsLibraryVC.h; sourceTree = "<group>"; };
+		579328621C905D21001627C1 /* SongsLibraryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongsLibraryVC.m; path = View/SongsLibraryVC.m; sourceTree = "<group>"; };
+		579328681C96BF49001627C1 /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Presenter.h; path = Presenter/Presenter.h; sourceTree = "<group>"; };
+		579328691C96BF49001627C1 /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Presenter.m; path = Presenter/Presenter.m; sourceTree = "<group>"; };
+		5793286B1C96BFBC001627C1 /* SongPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongPresenter.h; path = Presenter/SongPresenter.h; sourceTree = "<group>"; };
+		5793286C1C96BFBC001627C1 /* SongPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongPresenter.m; path = Presenter/SongPresenter.m; sourceTree = "<group>"; };
+		5793286E1C96C07E001627C1 /* SongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongTableViewCell.h; path = View/Cells/SongTableViewCell.h; sourceTree = "<group>"; };
+		5793286F1C96C07E001627C1 /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongTableViewCell.m; path = View/Cells/SongTableViewCell.m; sourceTree = "<group>"; };
+		579328731C96E05D001627C1 /* SongTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongTableViewDataSource.h; path = Presenter/SongTableViewDataSource.h; sourceTree = "<group>"; };
+		579328741C96E05D001627C1 /* SongTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongTableViewDataSource.m; path = Presenter/SongTableViewDataSource.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		579328121C8C8993001627C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579328531C8C8C6A001627C1 /* AudioToolbox.framework in Frameworks */,
+				579328511C8C8C60001627C1 /* CoreMedia.framework in Frameworks */,
+				5793284F1C8C8C52001627C1 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5793282B1C8C8993001627C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		576654BA1C9FE7F90060D01A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				579328521C8C8C6A001627C1 /* AudioToolbox.framework */,
+				579328501C8C8C60001627C1 /* CoreMedia.framework */,
+				5793284E1C8C8C52001627C1 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5793280C1C8C8993001627C1 = {
+			isa = PBXGroup;
+			children = (
+				579328171C8C8993001627C1 /* DreamsOfMusic */,
+				579328311C8C8993001627C1 /* DreamsOfMusicTests */,
+				579328161C8C8993001627C1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		579328161C8C8993001627C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				579328151C8C8993001627C1 /* DreamsOfMusic.app */,
+				5793282E1C8C8993001627C1 /* DreamsOfMusicTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		579328171C8C8993001627C1 /* DreamsOfMusic */ = {
+			isa = PBXGroup;
+			children = (
+				579328401C8C89DE001627C1 /* View */,
+				579328441C8C8A2E001627C1 /* Presenter */,
+				5793283F1C8C89D7001627C1 /* Model */,
+				579328541C8C9282001627C1 /* LocalMusic */,
+				579328181C8C8993001627C1 /* Supporting Files */,
+				576654BA1C9FE7F90060D01A /* Frameworks */,
+			);
+			path = DreamsOfMusic;
+			sourceTree = "<group>";
+		};
+		579328181C8C8993001627C1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5793281B1C8C8993001627C1 /* AppDelegate.h */,
+				5793281C1C8C8993001627C1 /* AppDelegate.m */,
+				579328211C8C8993001627C1 /* Main.storyboard */,
+				579328241C8C8993001627C1 /* Assets.xcassets */,
+				579328261C8C8993001627C1 /* LaunchScreen.storyboard */,
+				579328291C8C8993001627C1 /* Info.plist */,
+				579328191C8C8993001627C1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		579328311C8C8993001627C1 /* DreamsOfMusicTests */ = {
+			isa = PBXGroup;
+			children = (
+				579328321C8C8993001627C1 /* DreamsOfMusicTests.m */,
+				579328341C8C8993001627C1 /* Info.plist */,
+			);
+			path = DreamsOfMusicTests;
+			sourceTree = "<group>";
+		};
+		5793283F1C8C89D7001627C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				579328411C8C8A23001627C1 /* Song.h */,
+				579328421C8C8A23001627C1 /* Song.m */,
+				579328451C8C8A59001627C1 /* PlayerModel.h */,
+				579328461C8C8A59001627C1 /* PlayerModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		579328401C8C89DE001627C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				579328641C96BBBE001627C1 /* Cells */,
+				5793284B1C8C8AC5001627C1 /* PlayerViewController.h */,
+				5793284C1C8C8AC5001627C1 /* PlayerViewController.m */,
+				579328611C905D21001627C1 /* SongsLibraryVC.h */,
+				579328621C905D21001627C1 /* SongsLibraryVC.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		579328441C8C8A2E001627C1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				579328711C96DE73001627C1 /* CellPresenter */,
+				579328731C96E05D001627C1 /* SongTableViewDataSource.h */,
+				579328741C96E05D001627C1 /* SongTableViewDataSource.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		579328541C8C9282001627C1 /* LocalMusic */ = {
+			isa = PBXGroup;
+			children = (
+				579328551C8C933F001627C1 /* Сплин - Танцуй!.m4a */,
+				579328561C8C933F001627C1 /* Old Friends.flac */,
+				579328571C8C933F001627C1 /* System Of A Down - Lonely Day.mp3 */,
+			);
+			name = LocalMusic;
+			sourceTree = "<group>";
+		};
+		579328641C96BBBE001627C1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5793286E1C96C07E001627C1 /* SongTableViewCell.h */,
+				5793286F1C96C07E001627C1 /* SongTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		579328711C96DE73001627C1 /* CellPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				5793286B1C96BFBC001627C1 /* SongPresenter.h */,
+				5793286C1C96BFBC001627C1 /* SongPresenter.m */,
+				579328681C96BF49001627C1 /* Presenter.h */,
+				579328691C96BF49001627C1 /* Presenter.m */,
+			);
+			name = CellPresenter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		579328141C8C8993001627C1 /* DreamsOfMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579328371C8C8993001627C1 /* Build configuration list for PBXNativeTarget "DreamsOfMusic" */;
+			buildPhases = (
+				579328111C8C8993001627C1 /* Sources */,
+				579328121C8C8993001627C1 /* Frameworks */,
+				579328131C8C8993001627C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DreamsOfMusic;
+			productName = DreamsOfMusic;
+			productReference = 579328151C8C8993001627C1 /* DreamsOfMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5793282D1C8C8993001627C1 /* DreamsOfMusicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5793283A1C8C8993001627C1 /* Build configuration list for PBXNativeTarget "DreamsOfMusicTests" */;
+			buildPhases = (
+				5793282A1C8C8993001627C1 /* Sources */,
+				5793282B1C8C8993001627C1 /* Frameworks */,
+				5793282C1C8C8993001627C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				579328301C8C8993001627C1 /* PBXTargetDependency */,
+			);
+			name = DreamsOfMusicTests;
+			productName = DreamsOfMusicTests;
+			productReference = 5793282E1C8C8993001627C1 /* DreamsOfMusicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5793280D1C8C8993001627C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Alyona Belyaeva";
+				TargetAttributes = {
+					579328141C8C8993001627C1 = {
+						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					5793282D1C8C8993001627C1 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 579328141C8C8993001627C1;
+					};
+				};
+			};
+			buildConfigurationList = 579328101C8C8993001627C1 /* Build configuration list for PBXProject "DreamsOfMusic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5793280C1C8C8993001627C1;
+			productRefGroup = 579328161C8C8993001627C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				579328141C8C8993001627C1 /* DreamsOfMusic */,
+				5793282D1C8C8993001627C1 /* DreamsOfMusicTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		579328131C8C8993001627C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5793285A1C8C933F001627C1 /* System Of A Down - Lonely Day.mp3 in Resources */,
+				579328591C8C933F001627C1 /* Old Friends.flac in Resources */,
+				579328581C8C933F001627C1 /* Сплин - Танцуй!.m4a in Resources */,
+				579328281C8C8993001627C1 /* LaunchScreen.storyboard in Resources */,
+				579328251C8C8993001627C1 /* Assets.xcassets in Resources */,
+				579328231C8C8993001627C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5793282C1C8C8993001627C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		579328111C8C8993001627C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579328431C8C8A23001627C1 /* Song.m in Sources */,
+				5793286D1C96BFBC001627C1 /* SongPresenter.m in Sources */,
+				5793281D1C8C8993001627C1 /* AppDelegate.m in Sources */,
+				579328471C8C8A59001627C1 /* PlayerModel.m in Sources */,
+				5793281A1C8C8993001627C1 /* main.m in Sources */,
+				5793284D1C8C8AC5001627C1 /* PlayerViewController.m in Sources */,
+				5793286A1C96BF49001627C1 /* Presenter.m in Sources */,
+				579328701C96C07E001627C1 /* SongTableViewCell.m in Sources */,
+				579328631C905D21001627C1 /* SongsLibraryVC.m in Sources */,
+				579328751C96E05D001627C1 /* SongTableViewDataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5793282A1C8C8993001627C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579328331C8C8993001627C1 /* DreamsOfMusicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		579328301C8C8993001627C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 579328141C8C8993001627C1 /* DreamsOfMusic */;
+			targetProxy = 5793282F1C8C8993001627C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		579328211C8C8993001627C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				579328221C8C8993001627C1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		579328261C8C8993001627C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				579328271C8C8993001627C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		579328351C8C8993001627C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		579328361C8C8993001627C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		579328381C8C8993001627C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DreamsOfMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Alele.DreamsOfMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		579328391C8C8993001627C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DreamsOfMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Alele.DreamsOfMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5793283B1C8C8993001627C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DreamsOfMusicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Alele.DreamsOfMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamsOfMusic.app/DreamsOfMusic";
+			};
+			name = Debug;
+		};
+		5793283C1C8C8993001627C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DreamsOfMusicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Alele.DreamsOfMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamsOfMusic.app/DreamsOfMusic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		579328101C8C8993001627C1 /* Build configuration list for PBXProject "DreamsOfMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579328351C8C8993001627C1 /* Debug */,
+				579328361C8C8993001627C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579328371C8C8993001627C1 /* Build configuration list for PBXNativeTarget "DreamsOfMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579328381C8C8993001627C1 /* Debug */,
+				579328391C8C8993001627C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5793283A1C8C8993001627C1 /* Build configuration list for PBXNativeTarget "DreamsOfMusicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5793283B1C8C8993001627C1 /* Debug */,
+				5793283C1C8C8993001627C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5793280D1C8C8993001627C1 /* Project object */;
+}
