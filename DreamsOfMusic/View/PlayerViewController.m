@@ -8,7 +8,7 @@
 
 #import "PlayerViewController.h"
 
-@interface PlayerViewController ()
+@interface PlayerViewController () <PlayerModelDelegate>
 
 @property (nonatomic, weak) IBOutlet UILabel *songInfoLabel;
 
@@ -16,16 +16,19 @@
 
 @implementation PlayerViewController
 
-
-
 -(void)viewDidLoad{
     [super viewDidLoad];
-    NSLog(@"wth - %@",self.playerModel);
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    [self.playerModel addDelegate:self];
+    NSLog(@"OOOOO - %@",self.playerModel.trackList);
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [self.playerModel removeDelegate:self];
+    [super viewDidDisappear:animated];
 }
 
 -(PlayerModel *)playerModel{
@@ -38,27 +41,29 @@
 
 
 - (IBAction)playPrev:(id)sender {
-    
+    [self.playerModel playPreviousTrack];
 }
 
 - (IBAction)play:(id)sender {
-//    [self.player play];
+    if(self.playerModel.playbackState == MPMusicPlaybackStatePlaying){
+        [self.playerModel pause];
+    }else{
+        [self.playerModel play];
+    }
     [self.songInfoLabel setText:@"Now playing..."];
 }
 
 - (IBAction)playNext:(id)sender {
+    [self.playerModel playNextTrack];
 }
 
 
 - (IBAction)pause:(id)sender {
-//    [self.player stop];
+
     [self.songInfoLabel setText:@"Paused..."];
 }
 
 - (IBAction)stopSound {
-//    [self.player stop];
-    
-//    [self.player setCurrentTime:0.0];
     
     [self.songInfoLabel setText:@"Playback stopped."];
 }

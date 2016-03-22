@@ -21,7 +21,8 @@
 
 @interface PlayerModel : NSObject <MPMediaPlayback>
 
-@property (nonatomic, weak) MPMediaItem *nowPlayingTrack;
+@property (strong, nonatomic, readonly) MPMediaItem *nowPlayingTrack;
+@property (nonatomic) MPMusicPlaybackState playbackState;
     ////
 @property (nonatomic) MPMusicRepeatMode repeatMode;
 @property (nonatomic) MPMusicShuffleMode shuffleMode;
@@ -29,7 +30,7 @@
 @property (nonatomic) NSTimeInterval currentPlaybackTime;
 
 @property (nonatomic) float volume; // 0.0 to 1.0
-@property (nonatomic, readonly) NSUInteger indexOfNowPlayingItem;
+@property (nonatomic, readonly) NSUInteger indexOfNowPlayingTrack;
 @property (nonatomic, readonly) NSArray *trackList;
 
 + (PlayerModel *)sharedInstance;
@@ -43,10 +44,6 @@
 - (void)playNextTrack;
 - (void)playFromBeginning;
 - (void)playPreviousTrack;
-
-- (void)stopMusic;
-- (void)pauseMusic;
-
 
 - (void)playTrackAtIndex:(NSUInteger)index;
 - (void)playTrack:(MPMediaItem *)item;

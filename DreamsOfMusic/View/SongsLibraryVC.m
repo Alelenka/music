@@ -53,44 +53,26 @@ static NSString * const cellIdentifier = @"SongCell";
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
      if ([segue.identifier isEqualToString:@"PlayMusicSegue"]) {
-//         PlayerViewController *detailsVC;
-//         if ([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
-//             UINavigationController *nav = segue.destinationViewController;
-//             detailsVC = ((PlayerViewController *)nav.topViewController);
-//         }else {
-//             detailsVC = ((PlayerViewController *)segue.destinationViewController);
-//         }
-//         detailsVC.playerModel.firstSong = sender;
-//         detailsVC.playerModel.songsArray = self.songs;
-         MPMusicPlayerController *musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
-         
-         [musicPlayer setQueueWithItemCollection:[MPMediaItemCollection collectionWithItems:self.songs]];
-         [musicPlayer setNowPlayingItem:sender];
-         
-         [musicPlayer play];
+         PlayerViewController *detailsVC;
+         if ([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
+             UINavigationController *nav = segue.destinationViewController;
+             detailsVC = ((PlayerViewController *)nav.topViewController);
+         }else {
+             detailsVC = ((PlayerViewController *)segue.destinationViewController);
+         }
+         [detailsVC.playerModel setListWithItemCollection:[[MPMediaItemCollection alloc] initWithItems:self.songs]];
+         [detailsVC.playerModel playTrackAtIndex:[(NSIndexPath *)sender row]];
+         [detailsVC.playerModel play];
      }
     
     
-//    MPMediaQuery *songsQuery = [MPMediaQuery songsQuery];
-//    NSArray *songs = [songsQuery items];
-//    
-//    NSInteger selectedIndex = [[self.tableView indexPathForSelectedRow] row];
-//    
-//    MPMediaItem *selectedItem = [[songs objectAtIndex:selectedIndex] representativeItem];
-//    
-//    MPMusicPlayerController *musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
-//    
-//    [musicPlayer setQueueWithItemCollection:[MPMediaItemCollection collectionWithItems:[songsQuery items]]];
-//    [musicPlayer setNowPlayingItem:selectedItem];
-//    
-//    [musicPlayer play];
 }
 
 
 #pragma mark - UITableViewDelegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"PlayMusicSegue" sender:[self.songs objectAtIndex:indexPath.row]];
+    [self performSegueWithIdentifier:@"PlayMusicSegue" sender:indexPath];
 }
 
 
