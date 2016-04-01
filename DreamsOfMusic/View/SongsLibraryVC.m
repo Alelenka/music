@@ -14,6 +14,7 @@
 #import "Song.h"
 #import "SongTableViewCell.h"
 #import "SongTableViewDataSource.h"
+#import "LibraryModel.h"
 
 static NSString * const cellIdentifier = @"SongCell";
 
@@ -30,16 +31,27 @@ static NSString * const cellIdentifier = @"SongCell";
 
 @implementation SongsLibraryVC
 
+
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.navigationItem.title = @"Songs";
     [self setupTableView];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupTableView) name:@"SetMusicLibrary" object:nil];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SetMusicLibrary" object:nil];
+}
+
 
 - (void)setupTableView
 {
-    self.songs = [[MPMediaQuery songsQuery] items];
+    self.songs = [[LibraryModel sharedInstance] getAllSongs];
     TableViewCellConfigureBlock configureCell = ^(SongTableViewCell *cell, MPMediaItem *info) {
         cell.presenter.model = [Song songWithMediaInfo:info];
     };
@@ -63,6 +75,7 @@ static NSString * const cellIdentifier = @"SongCell";
          [detailsVC.playerModel setListWithItemCollection:[[MPMediaItemCollection alloc] initWithItems:self.songs]];
          [detailsVC.playerModel playTrackAtIndex:[(NSIndexPath *)sender row]];
          [detailsVC.playerModel play];
+
      }
     
     

@@ -27,6 +27,7 @@
 		5793286D1C96BFBC001627C1 /* SongPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5793286C1C96BFBC001627C1 /* SongPresenter.m */; };
 		579328701C96C07E001627C1 /* SongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5793286F1C96C07E001627C1 /* SongTableViewCell.m */; };
 		579328751C96E05D001627C1 /* SongTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 579328741C96E05D001627C1 /* SongTableViewDataSource.m */; };
+		57DA51A41CAE758300CA1020 /* LibraryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DA51A31CAE758300CA1020 /* LibraryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		5793286F1C96C07E001627C1 /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongTableViewCell.m; path = View/Cells/SongTableViewCell.m; sourceTree = "<group>"; };
 		579328731C96E05D001627C1 /* SongTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongTableViewDataSource.h; path = Presenter/SongTableViewDataSource.h; sourceTree = "<group>"; };
 		579328741C96E05D001627C1 /* SongTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongTableViewDataSource.m; path = Presenter/SongTableViewDataSource.m; sourceTree = "<group>"; };
+		57DA51A21CAE758300CA1020 /* LibraryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibraryModel.h; path = Model/LibraryModel.h; sourceTree = "<group>"; };
+		57DA51A31CAE758300CA1020 /* LibraryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LibraryModel.m; path = Model/LibraryModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				579328421C8C8A23001627C1 /* Song.m */,
 				579328451C8C8A59001627C1 /* PlayerModel.h */,
 				579328461C8C8A59001627C1 /* PlayerModel.m */,
+				57DA51A21CAE758300CA1020 /* LibraryModel.h */,
+				57DA51A31CAE758300CA1020 /* LibraryModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				579328471C8C8A59001627C1 /* PlayerModel.m in Sources */,
 				5793281A1C8C8993001627C1 /* main.m in Sources */,
 				5793284D1C8C8AC5001627C1 /* PlayerViewController.m in Sources */,
+				57DA51A41CAE758300CA1020 /* LibraryModel.m in Sources */,
 				5793286A1C96BF49001627C1 /* Presenter.m in Sources */,
 				579328701C96C07E001627C1 /* SongTableViewCell.m in Sources */,
 				579328631C905D21001627C1 /* SongsLibraryVC.m in Sources */,

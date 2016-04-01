@@ -10,7 +10,9 @@
 
 @interface PlayerViewController () <PlayerModelDelegate>
 
+@property (weak, nonatomic) IBOutlet UISlider *volumeSlider;
 @property (nonatomic, weak) IBOutlet UILabel *songInfoLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *songImage;
 
 @end
 
@@ -23,7 +25,6 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.playerModel addDelegate:self];
-    NSLog(@"OOOOO - %@",self.playerModel.trackList);
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
@@ -50,7 +51,6 @@
     }else{
         [self.playerModel play];
     }
-    [self.songInfoLabel setText:@"Now playing..."];
 }
 
 - (IBAction)playNext:(id)sender {
@@ -59,13 +59,23 @@
 
 
 - (IBAction)pause:(id)sender {
-
-    [self.songInfoLabel setText:@"Paused..."];
+    [self.playerModel pause];
 }
 
 - (IBAction)stopSound {
     
-    [self.songInfoLabel setText:@"Playback stopped."];
 }
+
+- (IBAction)volumeValueChanged:(UISlider *)sender {
+    self.playerModel.volume = sender.value;
+}
+
+-(void)trackDidChange:(MPMediaItem *)nowPlayingTrack previousTrack:(MPMediaItem *)previousTrack{
+    NSLog(@"меняй инфо о песен %@", nowPlayingTrack);
+    self.songInfoLabel.text = [NSString stringWithFormat:@"%@ - %@",[nowPlayingTrack valueForProperty:MPMediaItemPropertyArtist],[nowPlayingTrack valueForProperty:MPMediaItemPropertyTitle]];
+    MPMediaItemArtwork *artwork = [nowPlayingTrack valueForProperty: MPMediaItemPropertyArtwork];
+    self.songImage.image = [artwork imageWithSize: CGSizeMake (320, 320)];
+}
+
 
 @end

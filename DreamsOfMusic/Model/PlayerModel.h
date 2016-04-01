@@ -15,7 +15,6 @@
 -(void)trackDidChange:(MPMediaItem *)nowPlayingTrack previousTrack:(MPMediaItem *)previousTrack;
 -(void)endOfListReached:(MPMediaItem *)lastTrack;
 -(void)playbackStateChanged:(MPMusicPlaybackState)nowState previousState:(MPMusicPlaybackState)previousState;
--(void)volumeChanged:(float)volume;
 @end
 
 

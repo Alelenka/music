@@ -79,9 +79,6 @@
     if([delegate respondsToSelector:@selector(trackDidChange:previousTrack:)]){
         [delegate trackDidChange:self.nowPlayingTrack previousTrack:nil];
     }
-    if([delegate respondsToSelector:@selector(volumeChanged:)]){
-        [delegate volumeChanged:self.volume];
-    }
 }
 
 -(void)removeDelegate:(id<PlayerModelDelegate>)delegate{
@@ -170,11 +167,7 @@
 }
 
 - (void)setVolume:(float)volume {
-    for (id <PlayerModelDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(volumeChanged:)]) {
-            [delegate volumeChanged:volume];
-        }
-    }
+    self.player.volume = volume;
 }
 
 - (void)setOriginaltrackList:(NSArray *)originaltrackList{
@@ -212,14 +205,14 @@
     if (indexOfNowPlayingTrack == NSNotFound) {
         return;
     }
-    
+    NSLog(@"!!@@#@");
     _indexOfNowPlayingTrack = indexOfNowPlayingTrack;
     self.nowPlayingTrack = self.trackList[indexOfNowPlayingTrack];
 }
 
 -(void)setNowPlayingTrack:(MPMediaItem *)nowPlayingTrack{
     
-//    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
     
     MPMediaItem *prevTrack = _nowPlayingTrack;
     _nowPlayingTrack = nowPlayingTrack;
@@ -233,7 +226,7 @@
         self.player = [AVPlayer playerWithPlayerItem:playerItem];
     }
     
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAVPlayerItemDidPlayToEndTimeNotification) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAVPlayerItemDidPlayToEndTimeNotification) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
     
     for (id <PlayerModelDelegate> delegate in self.delegates) {
         if ([delegate respondsToSelector:@selector(trackDidChange:previousTrack:)]) {
