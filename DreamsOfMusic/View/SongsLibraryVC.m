@@ -52,8 +52,8 @@ static NSString * const cellIdentifier = @"SongCell";
 - (void)setupTableView
 {
     self.songs = [[LibraryModel sharedInstance] getAllSongs];
-    TableViewCellConfigureBlock configureCell = ^(SongTableViewCell *cell, MPMediaItem *info) {
-        cell.presenter.model = [Song songWithMediaInfo:info];
+    TableViewCellConfigureBlock configureCell = ^(SongTableViewCell *cell, Song *info) {
+        cell.presenter.model = info;
     };
     
     self.songTVDataSource = [[SongTableViewDataSource alloc] initWithItems:self.songs
@@ -72,7 +72,7 @@ static NSString * const cellIdentifier = @"SongCell";
          }else {
              detailsVC = ((PlayerViewController *)segue.destinationViewController);
          }
-         [detailsVC.playerModel setListWithItemCollection:[[MPMediaItemCollection alloc] initWithItems:self.songs]];
+         [detailsVC.playerModel setListWithSongs:self.songs];
          [detailsVC.playerModel playTrackAtIndex:[(NSIndexPath *)sender row]];
          [detailsVC.playerModel play];
 

@@ -16,7 +16,8 @@
     self.nameLabel.text = song.name;
     self.singerLabel.text = song.singer;
     self.albumLabel.text = song.album;
-    self.frontImageView.image = song.imageNamed;
+    self.frontImageView.image = song.artwork;
+#warning show year rigth!
 //    self.yearLabel.text = [NSString stringWithFormat:@"%@", song.year];
 }
 

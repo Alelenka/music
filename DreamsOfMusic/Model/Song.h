@@ -7,23 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MediaPlayer/MediaPlayer.h>
+#import <UIKit/UIKit.h>
 
 @interface Song : NSObject
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *singer;
-@property (nonatomic, copy) NSString *album;
-@property (nonatomic, copy) UIImage *imageNamed;
-@property (nonatomic, copy) NSNumber *year;
-@property (nonatomic, copy) NSURL *songUrl;
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) NSString *singer;
+@property (nonatomic, readonly) NSString *album;
+@property (nonatomic, readonly) NSNumber *year;
+@property (nonatomic, readonly) NSURL *songUrl;
+@property (nonatomic, readonly) UIImage *artwork;
 
-+ (Song *)songWithName:(NSString *)name
-               singer:(NSString *)singer
-                album:(NSString *)album
-          imageNamed:(UIImage *)imageNamed
-                  year:(NSNumber *)year;
+//+ (Song *)songWithName:(NSString *)name
+//               singer:(NSString *)singer
+//                album:(NSString *)album
+//          imageNamed:(UIImage *)imageNamed
+//                  year:(NSNumber *)year;
 
-+ (Song *)songWithMediaInfo:(MPMediaItem *)item;
+-(instancetype)initWithElement:(id)element;
 
 @end

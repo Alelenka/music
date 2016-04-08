@@ -70,11 +70,10 @@
     self.playerModel.volume = sender.value;
 }
 
--(void)trackDidChange:(MPMediaItem *)nowPlayingTrack previousTrack:(MPMediaItem *)previousTrack{
+-(void)trackDidChange:(Song *)nowPlayingTrack previousTrack:(Song *)previousTrack{
     NSLog(@"меняй инфо о песен %@", nowPlayingTrack);
-    self.songInfoLabel.text = [NSString stringWithFormat:@"%@ - %@",[nowPlayingTrack valueForProperty:MPMediaItemPropertyArtist],[nowPlayingTrack valueForProperty:MPMediaItemPropertyTitle]];
-    MPMediaItemArtwork *artwork = [nowPlayingTrack valueForProperty: MPMediaItemPropertyArtwork];
-    self.songImage.image = [artwork imageWithSize: CGSizeMake (320, 320)];
+    self.songInfoLabel.text = [NSString stringWithFormat:@"%@ - %@",nowPlayingTrack.singer,nowPlayingTrack.name];
+    self.songImage.image = nowPlayingTrack.artwork;
 }
 
 

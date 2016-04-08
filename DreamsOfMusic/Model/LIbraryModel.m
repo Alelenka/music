@@ -8,6 +8,8 @@
 
 #import "LibraryModel.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "Song.h"
+
 
 @interface LibraryModel ()
 
@@ -38,15 +40,20 @@
     for (MPMediaItem * item in [[MPMediaQuery songsQuery] items]) {
         NSURL* assetURL = [item valueForProperty:MPMediaItemPropertyAssetURL];
         if (assetURL) {
-            [freeArray addObject:item];
+            Song *song = [[Song alloc] initWithElement:item];
+            [freeArray addObject:song];
         }
     }
+#warning all of it in Songs.h
+    
+    
+    [freeArray addObject:[[Song alloc] initWithElement:[[NSBundle mainBundle] pathForResource:@"System Of A Down - Lonely Day" ofType:@"mp3"]]];
+    [freeArray addObject:[[Song alloc] initWithElement:[[NSBundle mainBundle] pathForResource:@"Сплин - Танцуй!" ofType:@"m4a"]]];
     self.songs = freeArray;
     
         //get songs from localDoc
         //get albums and artist
     
-    NSLog(@"!!!!");
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SetMusicLibrary" object:nil];
 }
 

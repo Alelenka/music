@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -113,8 +112,8 @@
                                                         <outlet property="yearLabel" destination="ffu-Hi-shN" id="NiQ-mo-VQB"/>
                                                     </connections>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Год" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ffu-Hi-shN">
-                                                    <rect key="frame" x="564" y="35" width="28" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ffu-Hi-shN">
+                                                    <rect key="frame" x="592" y="56" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -261,7 +260,7 @@
                                     <constraint firstItem="igi-bm-1l7" firstAttribute="centerX" secondItem="G9h-df-Vp6" secondAttribute="centerX" id="0rC-n5-c56"/>
                                     <constraint firstItem="Zos-Q0-DKf" firstAttribute="top" secondItem="G9h-df-Vp6" secondAttribute="top" constant="55" id="1EO-RN-fvj"/>
                                     <constraint firstAttribute="trailing" secondItem="A1C-dG-eut" secondAttribute="trailing" constant="70" id="1ZL-ZJ-xYq"/>
-                                    <constraint firstItem="Zos-Q0-DKf" firstAttribute="firstBaseline" secondItem="A1C-dG-eut" secondAttribute="firstBaseline" id="1wW-oU-6vi"/>
+                                    <constraint firstItem="Zos-Q0-DKf" firstAttribute="centerY" secondItem="A1C-dG-eut" secondAttribute="centerY" id="1wW-oU-6vi"/>
                                     <constraint firstItem="Zos-Q0-DKf" firstAttribute="centerY" secondItem="G9h-df-Vp6" secondAttribute="centerY" id="5xb-wu-Dn1"/>
                                     <constraint firstItem="gZs-RZ-7kd" firstAttribute="leading" secondItem="G9h-df-Vp6" secondAttribute="leading" constant="97" id="68X-Vg-me4"/>
                                     <constraint firstItem="A1C-dG-eut" firstAttribute="baseline" secondItem="Zos-Q0-DKf" secondAttribute="baseline" id="79e-L8-0CL"/>
@@ -273,7 +272,7 @@
                                     <constraint firstItem="igi-bm-1l7" firstAttribute="centerX" secondItem="G9h-df-Vp6" secondAttribute="centerX" id="AZH-iQ-sEE"/>
                                     <constraint firstItem="A1C-dG-eut" firstAttribute="centerY" secondItem="G9h-df-Vp6" secondAttribute="centerY" id="AZr-oC-9LO"/>
                                     <constraint firstItem="gZs-RZ-7kd" firstAttribute="centerX" secondItem="G9h-df-Vp6" secondAttribute="centerX" id="DbX-nq-JAB"/>
-                                    <constraint firstItem="A1C-dG-eut" firstAttribute="firstBaseline" secondItem="Zos-Q0-DKf" secondAttribute="baseline" id="E6O-jI-V2I"/>
+                                    <constraint firstItem="A1C-dG-eut" firstAttribute="centerY" secondItem="Zos-Q0-DKf" secondAttribute="centerY" id="E6O-jI-V2I"/>
                                     <constraint firstItem="Zos-Q0-DKf" firstAttribute="top" secondItem="G9h-df-Vp6" secondAttribute="top" constant="55" id="Eqs-nR-3Vb"/>
                                     <constraint firstAttribute="width" constant="240" id="Evo-Ol-fDC"/>
                                     <constraint firstItem="Zos-Q0-DKf" firstAttribute="bottom" secondItem="A1C-dG-eut" secondAttribute="bottom" id="Hvk-ay-dCp"/>
@@ -292,7 +291,7 @@
                                     <constraint firstItem="gZs-RZ-7kd" firstAttribute="top" secondItem="G9h-df-Vp6" secondAttribute="top" constant="23" id="ccw-If-9Fb"/>
                                     <constraint firstItem="igi-bm-1l7" firstAttribute="leading" secondItem="G9h-df-Vp6" secondAttribute="leading" constant="105" id="fae-I7-WWc"/>
                                     <constraint firstItem="Zos-Q0-DKf" firstAttribute="leading" secondItem="G9h-df-Vp6" secondAttribute="leading" constant="71" id="g3J-qb-vSr"/>
-                                    <constraint firstItem="A1C-dG-eut" firstAttribute="baseline" secondItem="Zos-Q0-DKf" secondAttribute="firstBaseline" id="ipL-p2-bYN"/>
+                                    <constraint firstItem="A1C-dG-eut" firstAttribute="centerY" secondItem="Zos-Q0-DKf" secondAttribute="centerY" id="ipL-p2-bYN"/>
                                     <constraint firstItem="Zos-Q0-DKf" firstAttribute="centerX" secondItem="G9h-df-Vp6" secondAttribute="centerX" constant="-35" id="mWv-Be-9dY"/>
                                     <constraint firstItem="gZs-RZ-7kd" firstAttribute="centerY" secondItem="G9h-df-Vp6" secondAttribute="centerY" constant="-35" id="naQ-dH-O77"/>
                                     <constraint firstItem="Zos-Q0-DKf" firstAttribute="top" secondItem="A1C-dG-eut" secondAttribute="top" id="nlG-Wu-sik"/>

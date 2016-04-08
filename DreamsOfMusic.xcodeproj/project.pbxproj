@@ -99,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5731E0531CB79005001938E0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				579328411C8C8A23001627C1 /* Song.h */,
+				579328421C8C8A23001627C1 /* Song.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 		576654BA1C9FE7F90060D01A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,8 +175,7 @@
 		5793283F1C8C89D7001627C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				579328411C8C8A23001627C1 /* Song.h */,
-				579328421C8C8A23001627C1 /* Song.m */,
+				5731E0531CB79005001938E0 /* Entity */,
 				579328451C8C8A59001627C1 /* PlayerModel.h */,
 				579328461C8C8A59001627C1 /* PlayerModel.m */,
 				57DA51A21CAE758300CA1020 /* LibraryModel.h */,

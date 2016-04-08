@@ -16,7 +16,7 @@
 @property (nonatomic, strong) AVPlayer *player;
 
 @property (strong, nonatomic) NSArray *originaltrackList;
-@property (nonatomic, strong, readwrite) MPMediaItem *nowPlayingTrack;
+@property (nonatomic, strong, readwrite) Song *nowPlayingTrack;
 @property (nonatomic, readwrite) NSUInteger indexOfNowPlayingTrack;
 @property (nonatomic, strong, readwrite) NSArray *trackList;
 
@@ -97,6 +97,10 @@
     self.originaltrackList = [query items];
 }
 
+- (void)setListWithSongs:(NSArray *)songs{
+    self.originaltrackList = songs;
+}
+
 -(void)playNextTrack{
     if(self.indexOfNowPlayingTrack+1 < [self.trackList count]){
             //play next track
@@ -155,11 +159,6 @@
 }
 
 
-- (float)currentPlaybackRate {
-    return self.player.rate;
-}
-
-
 
 - (void)setShuffleMode:(MPMusicShuffleMode)shuffleMode {
     _shuffleMode = shuffleMode;
@@ -205,20 +204,18 @@
     if (indexOfNowPlayingTrack == NSNotFound) {
         return;
     }
-    NSLog(@"!!@@#@");
     _indexOfNowPlayingTrack = indexOfNowPlayingTrack;
     self.nowPlayingTrack = self.trackList[indexOfNowPlayingTrack];
 }
 
--(void)setNowPlayingTrack:(MPMediaItem *)nowPlayingTrack{
+-(void)setNowPlayingTrack:(Song *)nowPlayingTrack{
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
     
-    MPMediaItem *prevTrack = _nowPlayingTrack;
+    Song *prevTrack = _nowPlayingTrack;
     _nowPlayingTrack = nowPlayingTrack;
     
-    NSURL *assetUrl = [nowPlayingTrack valueForProperty:MPMediaItemPropertyAssetURL];
-    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:assetUrl];
+    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:nowPlayingTrack.songUrl];
     
     if(self.player){
         [self.player replaceCurrentItemWithPlayerItem:playerItem];
@@ -249,5 +246,35 @@
 }
 
 
+#pragma mark MPMediaPlayBack
+
+
+- (BOOL)isPreparedToPlay {
+    return YES;
+}
+
+- (void)setCurrentPlaybackRate:(float)currentPlaybackRate {
+    self.player.rate = currentPlaybackRate;
+}
+
+- (float)currentPlaybackRate {
+    return self.player.rate;
+}
+
+- (void)prepareToPlay {
+    NSLog(@"!!!!!");
+}
+
+- (void)beginSeekingBackward {
+    NSLog(@"+++++");
+}
+
+- (void)beginSeekingForward {
+    NSLog(@"DO something");
+}
+
+- (void)endSeeking {
+    NSLog(@"Not working right now");
+}
 
 @end

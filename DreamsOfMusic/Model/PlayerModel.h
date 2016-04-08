@@ -8,19 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "Song.h"
 
 /** all delegate method is optional **/
 @protocol PlayerModelDelegate <NSObject>
 @optional
--(void)trackDidChange:(MPMediaItem *)nowPlayingTrack previousTrack:(MPMediaItem *)previousTrack;
--(void)endOfListReached:(MPMediaItem *)lastTrack;
+-(void)trackDidChange:(Song *)nowPlayingTrack previousTrack:(Song *)previousTrack;
+-(void)endOfListReached:(Song *)lastTrack;
 -(void)playbackStateChanged:(MPMusicPlaybackState)nowState previousState:(MPMusicPlaybackState)previousState;
 @end
 
 
 @interface PlayerModel : NSObject <MPMediaPlayback>
 
-@property (strong, nonatomic, readonly) MPMediaItem *nowPlayingTrack;
+@property (strong, nonatomic, readonly) Song *nowPlayingTrack;
 @property (nonatomic) MPMusicPlaybackState playbackState;
     ////
 @property (nonatomic) MPMusicRepeatMode repeatMode;
@@ -39,12 +40,13 @@
 - (void)remoteControlReceivedWithEvent:(UIEvent *)receivedEvent;
 - (void)setListWithItemCollection:(MPMediaItemCollection *)itemCollection;
 - (void)setListWithQuery:(MPMediaQuery *)query;
+- (void)setListWithSongs:(NSArray *)songs;
 
 - (void)playNextTrack;
 - (void)playFromBeginning;
 - (void)playPreviousTrack;
 
 - (void)playTrackAtIndex:(NSUInteger)index;
-- (void)playTrack:(MPMediaItem *)item;
+- (void)playTrack:(Song *)item;//Song
 
 @end
